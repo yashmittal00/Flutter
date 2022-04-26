@@ -58,6 +58,9 @@ class TileCard extends StatelessWidget {
                   ),
                   if (imageUrl != null)
                     CachedNetworkImage(
+                      height: 30,
+                      width: 30,
+                      fit: BoxFit.cover,
                       imageUrl: imageUrl.toString(),
                       placeholder: (context, url) => const CircularProgressIndicator(),
                       errorWidget: (context, url, error) => const Icon(Icons.error),
